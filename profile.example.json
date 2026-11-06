@@ -1,0 +1,7 @@
+{
+  "location": { "country": "TR", "timezone": "Europe/Istanbul" },
+  "acceptedRegions": ["worldwide", "EMEA", "Europe"],
+  "workTypes": ["contract", "full-time"],
+  "stack": ["TypeScript", "React", "Node.js"],
+  "excludeKeywords": ["gambling"]
+}
