@@ -1,0 +1,30 @@
+{
+  "name": "eligible-jobs",
+  "version": "1.0.0",
+  "description": "A personal pool of remote job postings that a developer outside the US and the EU can actually apply to, checked against the employer's own posting.",
+  "scripts": {
+    "dev": "wrangler dev",
+    "deploy": "wrangler deploy",
+    "typecheck": "tsc"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/EmreErkorkmaz/eligible-jobs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/EmreErkorkmaz/eligible-jobs/issues"
+  },
+  "homepage": "https://github.com/EmreErkorkmaz/eligible-jobs#readme",
+  "devDependencies": {
+    "@types/node": "^26.6.6",
+    "typescript": "^7.0.2",
+    "wrangler": "^4.158.0"
+  },
+  "dependencies": {
+    "@neondatabase/serverless": "^1.2.0"
+  }
+}
