@@ -1,6 +1,8 @@
 # eligible-jobs
 
-A personal pool of remote job postings that a developer outside the US and the EU can actually apply to, checked against the employer's own posting.
+A self-hosted pool of remote job postings that a developer outside the US and the EU can actually apply to, checked against the employer's own posting.
+
+Each person runs their own copy with their own database and API keys. There is no shared hosted service.
 
 ## The problem
 
@@ -46,12 +48,16 @@ Status: planning. Nothing is built yet.
 - Polite scanning: once a day, a delay between requests, a User-Agent with a contact address, and conditional requests (`ETag`, `If-Modified-Since`) so unchanged data is not downloaded again.
 
 **Content**
-- Posting text belongs to the employer. A public version shows only facts (title, company, location, date, link), a short summary of its own and a link to the original.
+- Posting text belongs to the employer. It is stored only in your own database for the eligibility check and is never published from this project.
 - The evidence for an eligibility decision is at most one quoted sentence, with a link.
 - Personal data found in postings (for example a recruiter's name or email) is never published.
 
 **Privacy**
-- No personal data lives in this repository: no CV, profile, preferences or contact details. Real values go in environment variables or the database. `profile.example.json` shows the shape with fake data.
+- No personal data lives in this repository: no CV, profile, preferences or contact details. Real values go in environment variables or your own database. `profile.example.json` shows the shape with fake data.
+
+## Setup
+
+Setup instructions will be added once the scanner runs end to end. The database schema lives in `migrations/`, applied in order.
 
 ## Stack
 
