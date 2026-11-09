@@ -39,7 +39,7 @@ Each module ends with something that runs and can be shown.
 5. **Semantic matching:** rank postings against a profile with embeddings (pgvector).
 6. **Later:** draft an application for a chosen posting; nothing is sent without human approval.
 
-Status: planning. Nothing is built yet.
+Status: module 1 in progress. The scan reads one Greenhouse board and writes its postings to the database.
 
 ## Principles
 
@@ -57,7 +57,9 @@ Status: planning. Nothing is built yet.
 
 ## Setup
 
-Setup instructions will be added once the scanner runs end to end. The database schema lives in `migrations/`, applied in order.
+Setup instructions will be added once the scanner runs end to end.
+
+The database schema is defined with Drizzle in `src/db/schema.ts`, and new migrations are generated from it with `npx drizzle-kit generate` into `src/db/`. The first three tables were created by hand: on a new database, apply the files in `migrations/` in order first, then run `npx drizzle-kit migrate`.
 
 ## Stack
 

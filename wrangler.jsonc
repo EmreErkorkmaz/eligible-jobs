@@ -2,5 +2,8 @@
   "$schema": "node_modules/wrangler/config-schema.json",
   "name": "eligible-jobs",
   "main": "src/index.ts",
-  "compatibility_date": "2026-11-01"
+  "compatibility_date": "2026-11-01",
+  "vars": {
+    "USER_AGENT": "eligible-jobs (+https://github.com/EmreErkorkmaz/eligible-jobs)"
+  }
 }
