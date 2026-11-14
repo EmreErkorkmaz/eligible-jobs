@@ -13,6 +13,8 @@ export const companies = pgTable("companies", {
 	statusNote: text("status_note"),
 	country: text(),
 	createdAt: timestamp("created_at", { withTimezone: true, mode: 'string' }).defaultNow().notNull(),
+	etag: text(),
+	lastScannedAt: timestamp("last_scanned_at", { withTimezone: true, mode: "string" })
 }, (table) => [
 	unique("companies_ats_board_key").on(table.board, table.ats),
 	check("companies_ats_check", sql`ats = ANY (ARRAY['greenhouse'::text, 'lever'::text, 'ashby'::text])`),

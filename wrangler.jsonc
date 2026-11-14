@@ -5,5 +5,8 @@
   "compatibility_date": "2026-11-01",
   "vars": {
     "USER_AGENT": "eligible-jobs (+https://github.com/EmreErkorkmaz/eligible-jobs)"
+  },
+  "triggers": {
+    "crons": ["0 6 * * *"]
   }
 }

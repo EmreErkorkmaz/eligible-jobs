@@ -39,7 +39,7 @@ Each module ends with something that runs and can be shown.
 5. **Semantic matching:** rank postings against a profile with embeddings (pgvector).
 6. **Later:** draft an application for a chosen posting; nothing is sent without human approval.
 
-Status: module 1 in progress. The scan reads one Greenhouse board and writes its postings to the database.
+Status: module 1 in progress. A daily cron scans every active Greenhouse board, skips unchanged boards with ETag, and writes postings to the database.
 
 ## Principles
 
